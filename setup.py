@@ -3,7 +3,7 @@
 from setuptools import setup
 
 setup(name='polyops-tap-facebook',
-      version='0.0.2',
+      version='0.0.4',
       description='Singer.io tap for extracting data from the Facebook Ads API',
       author='Stitch',
       url='https://singer.io',
@@ -15,7 +15,7 @@ setup(name='polyops-tap-facebook',
           'pendulum>=1.2.0',
           'facebook_business==7.0.0',
           'requests==2.20.0',
-          'singer-python==5.8.1',
+          'singer-python==5.8.0',
       ],
       extras_require={
           'dev': [
