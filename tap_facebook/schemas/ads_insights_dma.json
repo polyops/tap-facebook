@@ -11,6 +11,11 @@
     "video_p75_watched_actions": { "$ref": "ads_action_stats.json" },
     "video_p100_watched_actions": { "$ref": "ads_action_stats.json" },
     "video_play_curve_actions": {"$ref": "ads_histogram_stats.json"},
+    "catalog_segment_value": { "$ref": "ads_action_stats.json" },
+    "catalog_segment_actions": { "$ref": "ads_action_stats.json" },
+    "conversions": { "$ref": "ads_action_stats.json" },
+    "conversion_values": { "$ref": "ads_action_stats.json" },
+    "purchase_roas": { "$ref": "ads_action_stats.json" },
     "clicks": {
       "type": ["null", "integer"]
     },
