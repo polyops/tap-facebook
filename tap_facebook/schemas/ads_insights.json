@@ -24,6 +24,12 @@
     "cost_per_conversion": { "$ref": "ads_action_stats.json" },
     "mobile_app_purchase_roas": { "$ref": "ads_action_stats.json" },
     "website_purchase_roas": { "$ref": "ads_action_stats.json" },
+    "publisher_platform": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
     "clicks": {
       "type": [
         "null",
