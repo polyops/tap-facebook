@@ -557,7 +557,7 @@ class AdsInsights(Stream):
 
 
 INSIGHTS_BREAKDOWNS_OPTIONS = {
-    'ads_insights': {"breakdowns": []},
+    'ads_insights': {"breakdowns": ["publisher_platform", "device_platform"]},
     'ads_insights_age_and_gender': {"breakdowns": ['age', 'gender'],
                                     "primary-keys": ['age', 'gender']},
     'ads_insights_country': {"breakdowns": ['country']},
