@@ -68,6 +68,12 @@
           "null",
           "number"
         ]
+      },
+      "inline": {
+        "type": [
+          "null",
+          "number"
+        ]
       }
     }
   }

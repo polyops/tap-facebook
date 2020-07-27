@@ -439,12 +439,12 @@ def advance_bookmark(stream, bookmark_key, date):
 @attr.s
 class AdsInsights(Stream):
     field_class = adsinsights.AdsInsights.Field
-    base_properties = ['campaign_id', 'adset_id', 'ad_id', 'date_start']
+    base_properties = ['account_id', 'date_start']
 
     state = attr.ib()
     options = attr.ib()
     action_breakdowns = attr.ib(default=ALL_ACTION_BREAKDOWNS)
-    level = attr.ib(default='ad')
+    level = attr.ib(default='account')
     action_attribution_windows = attr.ib(
         default=ALL_ACTION_ATTRIBUTION_WINDOWS)
     time_increment = attr.ib(default=1)
@@ -481,7 +481,6 @@ class AdsInsights(Stream):
                 'level': self.level,
                 'action_breakdowns': list(self.action_breakdowns),
                 'breakdowns': list(self.breakdowns),
-                'limit': self.limit,
                 'fields': list(self.fields().difference(self.invalid_insights_fields)),
                 'time_increment': self.time_increment,
                 'action_attribution_windows': list(self.action_attribution_windows),
@@ -557,7 +556,7 @@ class AdsInsights(Stream):
 
 
 INSIGHTS_BREAKDOWNS_OPTIONS = {
-    'ads_insights': {"breakdowns": ["publisher_platform", "device_platform"]},
+    'ads_insights': {"breakdowns": ["publisher_platform"],"primary-keys": ['publisher_platform'] },
     'ads_insights_age_and_gender': {"breakdowns": ['age', 'gender'],
                                     "primary-keys": ['age', 'gender']},
     'ads_insights_country': {"breakdowns": ['country']},
